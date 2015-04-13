@@ -1,0 +1,28 @@
+CREATE TABLE changelog
+    (
+        logID INT(5) NOT NULL AUTO_INCREMENT,
+        logdate DATETIME,
+        user VARCHAR(60),
+        reason VARCHAR(250),
+        account VARCHAR(8),
+        PRIMARY KEY(logID)
+    );
+CREATE TABLE alarmcustomers
+    (
+        customer VARCHAR(60),
+        recID INT(5) NOT NULL AUTO_INCREMENT,
+        APInum VARCHAR(8),
+        SO VARCHAR(8),
+        note TEXT,
+        active BOOL,
+        radiusID varchar(12),
+        alarmcom BOOL,
+        paneltype varchar(250),
+        address varchar(100),
+        installdate DATE,
+        addeddate DATE,
+        closuredate DATE,
+        PRIMARY KEY (recID)
+    );
+insert into alarmcustomers (customer, APINum, SO, note, active, radiusID, alarmcom, paneltype, address, installdate, addeddate, closuredate) value ("Mary Lourcks", "13000365", "36862", "Sent to API July 26", false, "none", true, "Simon XT", "900 Portsmouth Ave, Kingston, ON", "2011-08-25", NOW(), "2011-09-25");
+       
